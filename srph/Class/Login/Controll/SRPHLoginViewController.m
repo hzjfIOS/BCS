@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    //12345678
     self.userNameTextF = [[UITextField alloc]initWithFrame:CGRectMake(WIDTH(20), HEIGHT(200), WIDTH(335), HEIGHT(44))];
     self.userNameTextF.placeholder = @"请输入用户名";
     self.userNameTextF.font = [UIFont systemFontOfSize:12];
