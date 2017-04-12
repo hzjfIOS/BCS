@@ -1,0 +1,11 @@
+platform :ios, ‘8.0’
+xcodeproj ‘srph.xcodeproj’
+use_frameworks!
+target ‘srph’ do
+
+pod ‘AFNetworking’
+
+pod 'AliPay', '~> 2.1.2'
+
+pod 'WechatOpenSDK'
+end
