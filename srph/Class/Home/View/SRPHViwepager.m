@@ -55,7 +55,7 @@
         [self.WXScrollView addSubview:imaView];
         
     }
-    //123
+    //12345
     self.WXPage = [[UIPageControl alloc]initWithFrame:CGRectMake(10, WXHEIGHT - 40, WXWIDTH - 20, 20)];
     
     [self addSubview:self.WXPage];
