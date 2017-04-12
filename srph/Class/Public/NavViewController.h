@@ -12,6 +12,6 @@
 
 @property (strong, nonatomic) UIView *navView;
 
-- (void)createLeftButton:(NSString *)title andTitleColor:(UIColor *)titleColor andBgImaName:(NSString *)imaName andBgColor:(UIColor *)bgColor;
-- (void)createRigthButton;
+//- (void)createLeftButton:(NSString *)title andTitleColor:(UIColor *)titleColor andBgImaName:(NSString *)imaName andBgColor:(UIColor *)bgColor;
+//- (void)createRigthButton;
 @end

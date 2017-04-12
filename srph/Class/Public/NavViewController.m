@@ -1,14 +1,13 @@
 //
 //  NavViewController.m
 //  NavigationDemo
-//
-//  Created by 南开承盛 on 2017/1/17.
-//  Copyright © 2017年 南开承盛. All rights reserved.
+//  Created by admin on 2017/4/11.
+//  Copyright © 2017年 商融普惠. All rights reserved.
 //
 
 #import "NavViewController.h"
 
-@interface NavViewController ()
+@interface NavViewController ()<UINavigationControllerDelegate>
 
 @end
 
@@ -16,66 +15,66 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 64)];
-    [self.view addSubview:_navView];
-    self.navView.hidden = YES;
+    self.delegate = self;
     
-    [self removeAllSuperSubview];
     // Do any additional setup after loading the view.
 }
-
-- (void)removeAllSuperSubview{
+//这里可以封装成一个分类
+- (UIBarButtonItem *)barButtonItemWithImage:(NSString *)imageName highImage:(NSString *)highImageName target:(id)target action:(SEL)action
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button.bounds = CGRectMake(0, 0, 40, 40);
+    button.imageView.contentMode = UIViewContentModeLeft;
+    button.imageEdgeInsets = UIEdgeInsetsMake(0, -40, 0, 0);
+    button.adjustsImageWhenHighlighted = NO;
+    [button setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+    [button setImage:[UIImage imageNamed:highImageName] forState:UIControlStateHighlighted];
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     
-    for (UIView *seedView in self.view.subviews) {
+    return  [[UIBarButtonItem alloc] initWithCustomView:button];
+}
+
+-(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    // 判断是否为栈底控制器
+    if (self.viewControllers.count >0) {
+        viewController.hidesBottomBarWhenPushed = YES;
         
-        if ([seedView isKindOfClass:[self.navigationBar class]]) {
-            
-            [seedView removeFromSuperview];
-            break;
+    }
+    [super pushViewController:viewController animated:animated];
+    
+    
+}
+- (void)popToPre
+
+{
+    [self popViewControllerAnimated:YES];
+}
+#pragma mark --------navigation delegate
+//该方法可以解决popRootViewController时tabbar的bug
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    //删除系统自带的tabBarButton
+    for (UIView *tabBar in self.tabBarController.tabBar.subviews) {
+        if ([tabBar isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
+            [tabBar removeFromSuperview];
         }
     }
-}
-
-- (void)createLeftButton:(NSString *)title andTitleColor:(UIColor *)titleColor andBgImaName:(NSString *)imaName andBgColor:(UIColor *)bgColor {
-    UIButton *leftBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, 20, 50, 44)];
-    [leftBtn setTitle:title forState:UIControlStateNormal];
-    leftBtn.titleLabel.font = [UIFont systemFontOfSize:16 weight:1];
-    [leftBtn setTitleColor:titleColor forState:UIControlStateNormal];
-    [leftBtn addTarget:self action:@selector(popViewControllerAnimated:) forControlEvents:UIControlEventTouchUpInside];
-    [self.navView addSubview:leftBtn];
-}
-
-- (void)createRigthButton {
     
 }
 
-- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    if (self.viewControllers.count > 0) {
-        
-        viewController.hidesBottomBarWhenPushed = YES;
-        CATransition *animation = [CATransition animation];
-        animation.duration = 0.5f;
-        animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-        animation.type = kCATransitionPush;
-        animation.subtype = kCATransitionFromRight;
-        [self.view.layer addAnimation:animation forKey:nil];
-        [super pushViewController:viewController animated:NO];
-        return;
-    }
-    [super pushViewController:viewController animated:YES];
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
-
-
-
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

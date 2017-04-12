@@ -87,14 +87,14 @@
     homeNav.navigationBarHidden = YES;
     
     NavViewController *AroundNav = [[NavViewController alloc] initWithRootViewController:[[SRPHAroundViewController alloc] init]];
-    AroundNav.navigationBarHidden = YES;
+   // AroundNav.navigationBarHidden = YES;
     
     
     NavViewController *shopCartNav = [[NavViewController alloc] initWithRootViewController:[[SRPHShopCartViewController alloc] init]];
-    shopCartNav.navigationBarHidden = YES;
+   // shopCartNav.navigationBarHidden = YES;
     
     NavViewController *myNav = [[NavViewController alloc] initWithRootViewController:[[SRPHMyViewController alloc] init]];
-    myNav.navigationBarHidden = YES;
+   // myNav.navigationBarHidden = YES;
         // Do any additional setup after loading the view.
     
     self.viewControllers = @[homeNav,AroundNav,shopCartNav,myNav];
