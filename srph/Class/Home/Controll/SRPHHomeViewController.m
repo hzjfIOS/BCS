@@ -9,15 +9,16 @@
 #import "SRPHHomeViewController.h"
 #import "SRPHNextViewController.h"
 #import "SRPHViwepager.h"
+#import "SRTextField.h"
+#import <CoreLocation/CoreLocation.h>
 
-
-@interface SRPHHomeViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface SRPHHomeViewController ()<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
 
 @property (strong, nonatomic) UIButton *loginButton;
 
 @property (strong, nonatomic) UIButton *locationButton;
 
-@property (strong, nonatomic) UITextField *searchText;
+@property (strong, nonatomic) SRTextField *searchText;
 
 @property (strong, nonatomic) UIImageView *headIma;
 
@@ -52,10 +53,12 @@
     backgroundLabel.layer.borderColor = [UIColor grayColor].CGColor;
     [topView addSubview:backgroundLabel];
     
-    self.searchText = [[UITextField alloc] initWithFrame:CGRectMake(WIDTH(85), HEIGHT(7), WIDTH(230), HEIGHT(30))];
+    self.searchText = [[SRTextField alloc] initWithFrame:CGRectMake(WIDTH(85), HEIGHT(7), WIDTH(230), HEIGHT(30))];
     self.searchText.textColor = [UIColor blackColor];
     self.searchText.font = FONT(13);
     self.searchText.placeholder = @"搜索你需要的商品内容";
+    self.searchText.returnKeyType = UIReturnKeySearch;
+    self.searchText.delegate = self;
     [topView addSubview:self.searchText];
     
     self.headIma = [[UIImageView alloc] initWithFrame:CGRectMake(WIDTH(330), HEIGHT(0), WIDTH(26), HEIGHT(26))];
@@ -125,6 +128,19 @@
     }
     
     return cell;
+}
+
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    if ([string isEqualToString:@"\n"]){ //判断输入的字是否是回车，即按下return
+        //在这里做你响应return键的代码
+        
+        NSLog(@"return");
+        [self.view endEditing:YES];
+        return NO; //这里返回NO，就代表return键值失效，即页面上按下return，不会出现换行，如果为yes，则输入页面会换行
+    }
+    
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {
