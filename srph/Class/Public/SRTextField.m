@@ -32,8 +32,6 @@
     
     self.inputAccessoryView = bar;
     
-    
-    
     [button addTarget:self action:@selector(print) forControlEvents:UIControlEventTouchUpInside];
     
 }
