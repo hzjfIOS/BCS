@@ -15,25 +15,18 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - AliPay (2.1.2)
-  - MOBFoundation_IDFA (2.2.17)
-  - SMSSDK (2.1.5):
-    - MOBFoundation_IDFA
   - WechatOpenSDK (1.7.7)
 
 DEPENDENCIES:
   - AFNetworking
   - AliPay (~> 2.1.2)
-  - MOBFoundation_IDFA
-  - SMSSDK
   - WechatOpenSDK
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   AliPay: 2bd35a4e486d2a8c035043023cd846e886bb21d1
-  MOBFoundation_IDFA: ce39a93c7163b2877615d3a6acd1276a6a0132e6
-  SMSSDK: 7d19654f9d36392988e96bf697afdac983808b1a
   WechatOpenSDK: cbd332148eb792d444ed4eec94f421d98f2046ee
 
-PODFILE CHECKSUM: 40e9400b215ca41b108235131805784318678711
+PODFILE CHECKSUM: dee6fb518fcdb965c9a933406da8b85aaf5677c4
 
 COCOAPODS: 1.2.0
