@@ -8,4 +8,8 @@ pod ‘AFNetworking’
 pod 'AliPay', '~> 2.1.2'
 
 pod 'WechatOpenSDK'
+
+pod 'MOBFoundation_IDFA'
+
+pod 'SMSSDK'
 end

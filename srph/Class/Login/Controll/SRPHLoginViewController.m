@@ -8,13 +8,14 @@
 
 #import "SRPHLoginViewController.h"
 #import "TabBarViewController.h"
+#import "SRRegisteredVC.h"
 //#import <UMSocialQQHandler.h>
 @interface SRPHLoginViewController ()
 @property (strong, nonatomic) UITextField *userNameTextF;
 @property (strong, nonatomic) UITextField *passwordTextF;
 
 @property (strong, nonatomic) UIButton *loginButton;
-
+@property (strong, nonatomic) UIButton *registeredButton;
 @end
 
 @implementation SRPHLoginViewController
@@ -24,6 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    
     //12345678
     self.userNameTextF = [[UITextField alloc]initWithFrame:CGRectMake(WIDTH(20), HEIGHT(200), WIDTH(335), HEIGHT(44))];
     self.userNameTextF.placeholder = @"请输入用户名";
@@ -51,6 +53,34 @@
     [self.loginButton setTitle:@"登录" forState:UIControlStateNormal];
     [self.loginButton addTarget:self action:@selector(loginAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.loginButton];
+    
+    self.loginButton = [[UIButton alloc]initWithFrame:CGRectMake(WIDTH(50), HEIGHT(450), WIDTH(275), HEIGHT(44))];
+    self.loginButton.layer.cornerRadius = WIDTH(5);
+    self.loginButton.backgroundColor = [UIColor yellowColor];
+    self.loginButton.alpha = 0;
+    [self.loginButton setTitle:@"登录" forState:UIControlStateNormal];
+    [self.loginButton addTarget:self action:@selector(loginAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.loginButton];
+    
+    
+    self.registeredButton = [[UIButton alloc]initWithFrame:CGRectMake(WIDTH(50), HEIGHT(550), WIDTH(275), HEIGHT(44))];
+    self.registeredButton.layer.cornerRadius = WIDTH(5);
+    self.registeredButton.backgroundColor = [UIColor yellowColor];
+    
+    self.registeredButton.alpha = 0;
+    [self.registeredButton setTitle:@"注册" forState:UIControlStateNormal];
+    [self.registeredButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.registeredButton setTitleColor:[UIColor groupTableViewBackgroundColor] forState:UIControlStateHighlighted];
+    [self.registeredButton addTarget:self action:@selector(registeredAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.registeredButton];
+    
+    [self animationAction];
+
+    // Do any additional setup after loading the view.
+}
+
+//控件显示的动画
+- (void)animationAction {
     
     CGPoint userNameCenter = self.userNameTextF.center;
     CGPoint passwordCenter = self.passwordTextF.center;
@@ -80,14 +110,25 @@
             
         } completion:nil];
         
+        [UIView animateWithDuration:0.5 delay:0.8 usingSpringWithDamping:0.2 initialSpringVelocity:0 options:0 animations:^{
+            self.registeredButton.alpha = 1;
+            CGPoint center = self.registeredButton.center;
+            center.y -= 100;
+            self.registeredButton.center = center;
+            
+        } completion:nil];
+
         
+        
+
     }];
 
-
-    // Do any additional setup after loading the view.
 }
 
-
+- (void)registeredAction {
+    
+    [self.navigationController pushViewController:[[SRRegisteredVC alloc] init] animated:YES];
+}
 
 - (void)loginAction {
     [self dismissViewControllerAnimated:NO completion:nil];

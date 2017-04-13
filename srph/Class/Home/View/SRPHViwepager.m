@@ -48,7 +48,7 @@
     
     for (int i = 0; i < arr.count; i ++) {
         
-        UIImageView *imaView = [[UIImageView alloc] initWithFrame:CGRectMake(WXWIDTH * i, 0, WXWIDTH, 200)];
+        UIImageView *imaView = [[UIImageView alloc] initWithFrame:CGRectMake(WXWIDTH * i, 0, WXWIDTH, WXHEIGHT)];
         
         imaView.image = [UIImage imageNamed:arr[i]];
         

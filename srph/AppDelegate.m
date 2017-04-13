@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "TabBarViewController.h"
 #import "SRPHLoginViewController.h"
+#import "NavViewController.h"
+#import <SMS_SDK/SMSSDK.h>
 @interface AppDelegate ()
 
 @end
@@ -20,9 +22,14 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
-    self.window.rootViewController = [[SRPHLoginViewController alloc] init];;
+    
+    NavViewController *nav = [[NavViewController alloc] initWithRootViewController:[[SRPHLoginViewController alloc] init]];
+    
+    self.window.rootViewController = nav;;
     
     [self.window makeKeyAndVisible];
+    
+    [SMSSDK registerApp:@"1cf4bb1fe7740" withSecret:@"0e31e73deb2837947c5aedfb169abe6b"];
     
     return YES;
 }
