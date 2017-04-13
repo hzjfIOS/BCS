@@ -14,7 +14,7 @@
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>允许访问相册</string>
 	<key>NSContactsUsageDescription</key>
-	<string></string>
+	<string>允许访问通讯录</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
