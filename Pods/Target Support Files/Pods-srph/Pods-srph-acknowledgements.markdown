@@ -28,6 +28,14 @@ THE SOFTWARE.
 
 支付宝(中国)网络技术有限公司  版权所有.
 
+## MOBFoundation_IDFA
+
+Copyright © 2012-2015 mob
+
+## SMSSDK
+
+Copyright © 2012-2015 mob.com
+
 ## WechatOpenSDK
 
 Copyright 2017 tencent.com. All rights reserved.

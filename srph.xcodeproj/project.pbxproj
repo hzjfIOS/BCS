@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EA34F2D1E9F567000088E4B /* SRBodyCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA34F2A1E9F567000088E4B /* SRBodyCollectionCell.m */; };
+		2EA34F2E1E9F567000088E4B /* SRMainCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA34F2C1E9F567000088E4B /* SRMainCollectionCell.m */; };
+		2EA34F311E9F57AF00088E4B /* SRPersonHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA34F301E9F57AF00088E4B /* SRPersonHeaderCell.m */; };
+		2EA34F371E9F57DA00088E4B /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA34F341E9F57DA00088E4B /* UIColor+HexString.m */; };
+		2EA34F381E9F57DA00088E4B /* UIView+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA34F361E9F57DA00088E4B /* UIView+Addition.m */; };
+		2EA34F3B1E9F59FE00088E4B /* SRRegisteredVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA34F3A1E9F59FE00088E4B /* SRRegisteredVC.m */; };
+		2EA34F3E1E9F5A0E00088E4B /* SRSetPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EA34F3D1E9F5A0E00088E4B /* SRSetPasswordVC.m */; };
 		2EC360161E9CC09E002317B1 /* SRBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC360151E9CC09E002317B1 /* SRBaseViewController.m */; };
 		2EC3601F1E9CCE5A002317B1 /* NavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC3601E1E9CCE5A002317B1 /* NavViewController.m */; };
 		2EC360221E9CD171002317B1 /* SRTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC360211E9CD171002317B1 /* SRTextField.m */; };
@@ -48,6 +55,20 @@
 
 /* Begin PBXFileReference section */
 		172FFB29247A6E15A8E8C5B2 /* Pods-srph.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-srph.release.xcconfig"; path = "Pods/Target Support Files/Pods-srph/Pods-srph.release.xcconfig"; sourceTree = "<group>"; };
+		2EA34F291E9F567000088E4B /* SRBodyCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRBodyCollectionCell.h; sourceTree = "<group>"; };
+		2EA34F2A1E9F567000088E4B /* SRBodyCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRBodyCollectionCell.m; sourceTree = "<group>"; };
+		2EA34F2B1E9F567000088E4B /* SRMainCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRMainCollectionCell.h; sourceTree = "<group>"; };
+		2EA34F2C1E9F567000088E4B /* SRMainCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRMainCollectionCell.m; sourceTree = "<group>"; };
+		2EA34F2F1E9F57AF00088E4B /* SRPersonHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRPersonHeaderCell.h; sourceTree = "<group>"; };
+		2EA34F301E9F57AF00088E4B /* SRPersonHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRPersonHeaderCell.m; sourceTree = "<group>"; };
+		2EA34F331E9F57DA00088E4B /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
+		2EA34F341E9F57DA00088E4B /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
+		2EA34F351E9F57DA00088E4B /* UIView+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Addition.h"; sourceTree = "<group>"; };
+		2EA34F361E9F57DA00088E4B /* UIView+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addition.m"; sourceTree = "<group>"; };
+		2EA34F391E9F59FE00088E4B /* SRRegisteredVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRRegisteredVC.h; sourceTree = "<group>"; };
+		2EA34F3A1E9F59FE00088E4B /* SRRegisteredVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRegisteredVC.m; sourceTree = "<group>"; };
+		2EA34F3C1E9F5A0E00088E4B /* SRSetPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRSetPasswordVC.h; sourceTree = "<group>"; };
+		2EA34F3D1E9F5A0E00088E4B /* SRSetPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSetPasswordVC.m; sourceTree = "<group>"; };
 		2EC360141E9CC09E002317B1 /* SRBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRBaseViewController.h; sourceTree = "<group>"; };
 		2EC360151E9CC09E002317B1 /* SRBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRBaseViewController.m; sourceTree = "<group>"; };
 		2EC3601D1E9CCE5A002317B1 /* NavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavViewController.h; sourceTree = "<group>"; };
@@ -123,6 +144,17 @@
 				E5619B9AAD0922CF755519D6 /* Pods_srph.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2EA34F321E9F57DA00088E4B /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				2EA34F331E9F57DA00088E4B /* UIColor+HexString.h */,
+				2EA34F341E9F57DA00088E4B /* UIColor+HexString.m */,
+				2EA34F351E9F57DA00088E4B /* UIView+Addition.h */,
+				2EA34F361E9F57DA00088E4B /* UIView+Addition.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		2EC360131E9CC070002317B1 /* Base */ = {
@@ -201,6 +233,7 @@
 		2EE12EAA1E9B572000F9A6A4 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				2EA34F321E9F57DA00088E4B /* Category */,
 				2EC360131E9CC070002317B1 /* Base */,
 				2EE12EAB1E9B572000F9A6A4 /* Around */,
 				2EE12EB11E9B572000F9A6A4 /* Home */,
@@ -277,6 +310,10 @@
 		2EE12EB81E9B572000F9A6A4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2EA34F291E9F567000088E4B /* SRBodyCollectionCell.h */,
+				2EA34F2A1E9F567000088E4B /* SRBodyCollectionCell.m */,
+				2EA34F2B1E9F567000088E4B /* SRMainCollectionCell.h */,
+				2EA34F2C1E9F567000088E4B /* SRMainCollectionCell.m */,
 				2EE12EDF1E9C9D2F00F9A6A4 /* SRPHViwepager.h */,
 				2EE12EE01E9C9D2F00F9A6A4 /* SRPHViwepager.m */,
 			);
@@ -296,6 +333,10 @@
 		2EE12EBA1E9B572000F9A6A4 /* Controll */ = {
 			isa = PBXGroup;
 			children = (
+				2EA34F3C1E9F5A0E00088E4B /* SRSetPasswordVC.h */,
+				2EA34F3D1E9F5A0E00088E4B /* SRSetPasswordVC.m */,
+				2EA34F391E9F59FE00088E4B /* SRRegisteredVC.h */,
+				2EA34F3A1E9F59FE00088E4B /* SRRegisteredVC.m */,
 				2EE12EBB1E9B572000F9A6A4 /* SRPHLoginViewController.h */,
 				2EE12EBC1E9B572000F9A6A4 /* SRPHLoginViewController.m */,
 			);
@@ -345,6 +386,8 @@
 		2EE12EC41E9B572000F9A6A4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2EA34F2F1E9F57AF00088E4B /* SRPersonHeaderCell.h */,
+				2EA34F301E9F57AF00088E4B /* SRPersonHeaderCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -602,16 +645,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EE12ED71E9B572000F9A6A4 /* TabBarViewController.m in Sources */,
+				2EA34F381E9F57DA00088E4B /* UIView+Addition.m in Sources */,
 				2EE12ED21E9B572000F9A6A4 /* SRPHHomeViewController.m in Sources */,
 				2EE12ED31E9B572000F9A6A4 /* SRPHNextViewController.m in Sources */,
 				2EE12ED81E9B572000F9A6A4 /* SRPHShopCartViewController.m in Sources */,
 				2EC360161E9CC09E002317B1 /* SRBaseViewController.m in Sources */,
 				2EC3601F1E9CCE5A002317B1 /* NavViewController.m in Sources */,
+				2EA34F3B1E9F59FE00088E4B /* SRRegisteredVC.m in Sources */,
+				2EA34F2D1E9F567000088E4B /* SRBodyCollectionCell.m in Sources */,
+				2EA34F2E1E9F567000088E4B /* SRMainCollectionCell.m in Sources */,
 				2EE12ED51E9B572000F9A6A4 /* SRPHMyViewController.m in Sources */,
 				2EE12ED41E9B572000F9A6A4 /* SRPHLoginViewController.m in Sources */,
 				2EC360221E9CD171002317B1 /* SRTextField.m in Sources */,
 				2EE12E7C1E9B569300F9A6A4 /* AppDelegate.m in Sources */,
+				2EA34F371E9F57DA00088E4B /* UIColor+HexString.m in Sources */,
 				2EE12ED11E9B572000F9A6A4 /* SRPHAroundViewController.m in Sources */,
+				2EA34F311E9F57AF00088E4B /* SRPersonHeaderCell.m in Sources */,
+				2EA34F3E1E9F5A0E00088E4B /* SRSetPasswordVC.m in Sources */,
 				2EE12EE11E9C9D2F00F9A6A4 /* SRPHViwepager.m in Sources */,
 				2EE12ED61E9B572000F9A6A4 /* SRPHNavView.m in Sources */,
 				2EE12E791E9B569300F9A6A4 /* main.m in Sources */,
@@ -767,11 +817,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 95BNZ25U52;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/srph/pch.pch";
 				INFOPLIST_FILE = srph/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-Objc",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hzjf.srph;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -783,11 +837,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 95BNZ25U52;
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/srph/pch.pch";
 				INFOPLIST_FILE = srph/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-Objc",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hzjf.srph;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
